@@ -1,0 +1,8 @@
+***move model tests into model folder
+***remove extra files (helpers, tests, etc)
+**add shoulda-matcher tests for validation --> except password digest error
+***add presence validation for url
+***add test for has_secure_password
+***get rid of extra routes
+***get rid of extra html tags in views
+***fix url create on error

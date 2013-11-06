@@ -1,0 +1,10 @@
+<h1> Link Stats </h1>
+
+<ul style="list-style:none">
+   <% @urls.each do |url| %>
+    <li><%= url.original_url %></li>
+    <li><%= request.base_url + '/' + url.shortened_url %></li>
+  <% end %>
+</ul>
+
+<!-- add in short urls and a hrefs, plus eventually add in visits -->

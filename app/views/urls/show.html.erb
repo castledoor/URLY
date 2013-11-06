@@ -1,0 +1,10 @@
+<h1> Your new shortened URL! </h1>
+<div class="space">
+</div>
+
+<div class="shortTable">
+  <a href="<%= request.base_url +  '/' + @url.shortened_url %>" target="_blank"><%= request.base_url + '/' + @url.shortened_url %></a>
+
+  <p>This has been viewed <%= "#{@url.visits.count}" %> times.</p>
+</div>
+

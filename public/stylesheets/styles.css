@@ -1,0 +1,30 @@
+html {
+  text-align: center;
+  font-family: Futura, sans-serif;
+  margin: 0;
+}
+
+.shortTable {
+  padding-top: 20px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: #4E76E3;
+  width: auto;
+  
+
+}
+
+h1 {
+  background-color: #F21176;
+  margin: 0 0 0 0;
+  padding-bottom: 30px;
+}
+
+body {
+  margin: 0 0 0 0;
+  padding-bottom: 50px;
+}
+
+.space {
+  padding-bottom: 40px;
+}

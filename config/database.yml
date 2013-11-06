@@ -1,0 +1,9 @@
+
+development:
+  adapter: postgresql
+  database: urly_tiny_development
+ 
+test:
+  adapter: postgresql
+  database: urly_tiny_test
+
