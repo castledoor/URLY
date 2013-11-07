@@ -1,5 +1,4 @@
 <h1>URLYTINY!</h1>
-<body>
   <div id="user_header">
     <% if current_user %>
       Logged in as <%= current_user.email %>.
@@ -13,19 +12,16 @@
 
 
 
+<%= render 'urls/form' %>
 
-<%= form_for @url do |f|  %>
-  <%= f.label :original_url  %>
-  <%= f.text_field :original_url %>
-  <%= f.hidden_field :user_id %>
-  <%= f.submit %>
-<% end %>
 
 <% if @url.errors.any? %>
   <h3>Please correct these problems:</h3>
   <ul>
     <% @url.errors.full_messages.each do |message| %>
       <li><%= message %></li>
-    <% end %>
+    <% end %>                              
   </ul>
 <% end %>
+
+<div id="shorturl"></div>

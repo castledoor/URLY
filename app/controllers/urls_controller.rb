@@ -8,7 +8,11 @@ class UrlsController < ApplicationController
     # :user_id => current_user.id
     @url.user_id = current_user.id
     if @url.save
-      redirect_to url_path(@url.id)
+      respond_to do |format|
+      format.html { redirect_to urls_path }
+      format.js
+      end
+     
     else 
       redirect_to '/', notice: "Please enter an entire URL."
     end
