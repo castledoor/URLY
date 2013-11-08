@@ -55,3 +55,19 @@ h1 {
 .short_url {
   margin-left: -59%;
 }
+
+.btn {
+  -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    background: #A74b4b;
+    padding: 3px 8px 4px 8px;
+    text-decoration: none;
+    border:none;
+}
+ #user_header {
+  display:none;
+ }
