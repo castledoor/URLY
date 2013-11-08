@@ -16378,3 +16378,775 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:13:23 -0800
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:13:23 -0800
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:26:44 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"https://github.com/castledoor/posts_of_interest/blob/master/Gemfile", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (28.2ms)[0m  [1mINSERT INTO "urls" ("created_at", "original_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00]]
+  [1m[35mSQL (1.7ms)[0m  UPDATE "urls" SET "original_url" = $1, "created_at" = $2, "updated_at" = $3, "id" = $4, "shortened_url" = $5 WHERE "urls"."id" = 37  [["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["id", 37], ["shortened_url", 37]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1  [["url_id", 37]]
+  Rendered urls/_showurl.html.erb (0.9ms)
+  Rendered urls/create.js.erb (1.5ms)
+Completed 200 OK in 36ms (Views: 2.4ms | ActiveRecord: 31.0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:26:44 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"https://github.com/castledoor/posts_of_interest/blob/master/Gemfile", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "urls" ("created_at", "original_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "urls" SET "original_url" = $1, "created_at" = $2, "updated_at" = $3, "id" = $4, "shortened_url" = $5 WHERE "urls"."id" = 38[0m  [["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["id", 38], ["shortened_url", 38]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1[0m  [["url_id", 38]]
+  Rendered urls/_showurl.html.erb (1.1ms)
+  Rendered urls/create.js.erb (1.7ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:26:44 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"https://github.com/castledoor/posts_of_interest/blob/master/Gemfile", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "urls" ("created_at", "original_url", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "urls" SET "original_url" = $1, "created_at" = $2, "updated_at" = $3, "id" = $4, "shortened_url" = $5 WHERE "urls"."id" = 39  [["original_url", "https://github.com/castledoor/posts_of_interest/blob/master/Gemfile"], ["created_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:26:44 UTC +00:00], ["id", 39], ["shortened_url", 39]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1  [["url_id", 39]]
+  Rendered urls/_showurl.html.erb (0.9ms)
+  Rendered urls/create.js.erb (1.4ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+Processing by UrlsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered urls/_form.html.erb (1.4ms)
+  Rendered urls/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/URLY.png" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:27 -0800
+
+
+Started GET "/link_stats" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUrl Load (0.3ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:30 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+Processing by UrlsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered urls/_form.html.erb (1.5ms)
+  Rendered urls/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/URLY.png" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:27:31 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+Processing by UrlsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered urls/_form.html.erb (11.0ms)
+  Rendered urls/index.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/URLY.png" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:33:59 -0800
+
+
+Started GET "/link_stats" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUrl Load (0.3ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:01 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+Processing by UrlsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered urls/_form.html.erb (1.7ms)
+  Rendered urls/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/URLY.png" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:15 -0800
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:34:20 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "urls" ("created_at", "original_url", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["user_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "urls" SET "original_url" = $1, "user_id" = $2, "created_at" = $3, "updated_at" = $4, "id" = $5, "shortened_url" = $6 WHERE "urls"."id" = 40  [["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["user_id", 1], ["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["id", 40], ["shortened_url", 40]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1  [["url_id", 40]]
+  Rendered urls/_showurl.html.erb (4.5ms)
+  Rendered urls/create.js.erb (5.0ms)
+Completed 200 OK in 41ms (Views: 31.9ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:34:20 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "urls" ("created_at", "original_url", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "urls" SET "original_url" = $1, "user_id" = $2, "created_at" = $3, "updated_at" = $4, "id" = $5, "shortened_url" = $6 WHERE "urls"."id" = 41  [["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["user_id", 1], ["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["id", 41], ["shortened_url", 41]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1  [["url_id", 41]]
+  Rendered urls/_showurl.html.erb (1.0ms)
+  Rendered urls/create.js.erb (1.6ms)
+Completed 200 OK in 8ms (Views: 2.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2013-11-08 15:34:20 -0800
+Processing by UrlsController#create as JS
+  Parameters: {"utf8"=>"✓", "url"=>{"original_url"=>"http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs", "user_id"=>""}, "commit"=>"shorten"}
+Unpermitted parameters: user_id
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "urls" ("created_at", "original_url", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "urls" SET "original_url" = $1, "user_id" = $2, "created_at" = $3, "updated_at" = $4, "id" = $5, "shortened_url" = $6 WHERE "urls"."id" = 42  [["original_url", "http://stackoverflow.com/questions/2671454/heroku-how-to-see-all-the-logs"], ["user_id", 1], ["created_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["updated_at", Fri, 08 Nov 2013 23:34:20 UTC +00:00], ["id", 42], ["shortened_url", 42]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "visits" WHERE "visits"."url_id" = $1  [["url_id", 42]]
+  Rendered urls/_showurl.html.erb (0.9ms)
+  Rendered urls/create.js.erb (1.4ms)
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+Processing by UrlsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered urls/_form.html.erb (1.5ms)
+  Rendered urls/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/vendor/custom.modernizr.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/URLY.png" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:25 -0800
+
+
+Started GET "/link_stats" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUrl Load (0.3ms)[0m  [1mSELECT "urls".* FROM "urls" WHERE "urls"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-08 15:34:27 -0800

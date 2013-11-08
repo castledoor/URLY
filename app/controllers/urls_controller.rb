@@ -6,7 +6,7 @@ class UrlsController < ApplicationController
   def create
     @url = Url.new(url_params)
     # :user_id => current_user.id
-    # @url.user_id = current_user.id
+    @url.user_id = current_user.id
     if @url.save
       respond_to do |format|
       format.html { redirect_to urls_path }
