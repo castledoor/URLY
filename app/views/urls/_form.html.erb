@@ -1,5 +1,5 @@
 <%= form_for @url, remote:true do |f|  %>
-  <%= f.label :original_url  %>
+  <%= f.label :original_url ,:class => 'flabel' %>
   <%= f.text_field :original_url %>
   <%= f.hidden_field :user_id %>
   <%= f.submit :value => "shorten", :class => 'btn'  %>

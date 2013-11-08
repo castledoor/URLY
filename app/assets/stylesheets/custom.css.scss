@@ -4,12 +4,16 @@
 
 body{
   background-color: #F1F0F0;
+  text-align: justify;
 
 }
+.flabel {
+  width: 80px;
 
+}
 #content {
   margin-top: 100px;
-  margin-left: 20%;
+  margin-left: 232%;
   color:black;
 }
  h1.title {
@@ -20,6 +24,7 @@ body{
 
 .row {
   margin-left: 0px;
+
   max-width: 100%;
 }
 
@@ -49,11 +54,11 @@ h1 {
         0 0 16px rgba(0,0,0,0.1); 
   padding: 15px;
   background:rgba(67, 97, 23, 0.5);
-  margin: 0 0 10px 0;
+ 
 } 
 
 .short_url {
-  margin-left: -59%;
+width: 400px;
 }
 
 .btn {
@@ -71,3 +76,21 @@ h1 {
  #user_header {
   display:none;
  }
+
+ p{
+  width:400px;
+ }
+.result {
+  font-size: 20px;
+  text-align: center;
+}
+
+p#view {
+  margin-top: 40px;
+  font-family: Arial;
+  color: #6d6f21;
+}
+
+a {
+  color: #6d6f21;;
+}
