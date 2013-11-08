@@ -11,8 +11,7 @@ class UrlsController < ApplicationController
       respond_to do |format|
       format.html { redirect_to urls_path }
       format.js
-      end
-     
+      end    
     else 
       redirect_to '/', notice: "Please enter an entire URL."
     end

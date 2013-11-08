@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'pry'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'zurb-foundation'
 
 group :test, :development do
   gem 'rspec-rails'

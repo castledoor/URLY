@@ -1,0 +1,57 @@
+@import "foundation/variables";
+@import "foundation/components/global";
+@import "foundation/components/side-nav";
+
+body{
+  background-color: #F1F0F0;
+
+}
+
+#content {
+  margin-top: 100px;
+  margin-left: 20%;
+  color:black;
+}
+ h1.title {
+  margin:0px;
+  height: 300px;
+  color: #F1F0F0;
+ }
+
+.row {
+  margin-left: 0px;
+  max-width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.background {
+  background-color: #A74b4b
+}
+
+.logo {
+  margin-top: 60px;
+}
+
+#url_original_url {
+  width: 400px;
+  border: 5px solid white; 
+  -webkit-box-shadow: 
+  inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1); 
+  -moz-box-shadow: 
+  inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1); 
+  box-shadow: 
+  inset 0 0 8px  rgba(0,0,0,0.1),
+        0 0 16px rgba(0,0,0,0.1); 
+  padding: 15px;
+  background:rgba(67, 97, 23, 0.5);
+  margin: 0 0 10px 0;
+} 
+
+.short_url {
+  margin-left: -59%;
+}
